@@ -26,8 +26,8 @@ When filing an Issue, try to include:
 1. **Fork** this repository and **clone** your fork locally:
 
    ```bash
-   git clone https://github.com/your-username/quick-tab-opener.git
-   cd quick-tab-opener
+   git clone https://github.com/your-username/Ex-Chrome-quick-tab-opener.git
+   cd Ex-Chrome-quick-tab-opener
    ```
 
 2. Install dependencies:

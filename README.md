@@ -38,8 +38,8 @@ _(Screenshots will be added in a future update)_
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/gakkunn/quick-tab-opener.git
-cd quick-tab-opener
+git clone https://github.com/gakkunn/Ex-Chrome-quick-tab-opener.git
+cd Ex-Chrome-quick-tab-opener
 ```
 
 ### 2. Install dependencies & Build
@@ -89,8 +89,8 @@ npm run build
 ### Setup
 
 ```bash
-git clone https://github.com/gakkunn/quick-tab-opener.git
-cd quick-tab-opener
+git clone https://github.com/gakkunn/Ex-Chrome-quick-tab-opener.git
+cd Ex-Chrome-quick-tab-opener
 
 npm install
 npm run watch   # For development with auto-rebuild
@@ -119,7 +119,7 @@ npm run watch   # For development with auto-rebuild
 ## Project Structure
 
 ```text
-quick-tab-opener/
+Ex-Chrome-quick-tab-opener/
   src/                  # Extension source code
     background/         # Service worker (command handling)
       background.ts     # Keyboard command event handling
