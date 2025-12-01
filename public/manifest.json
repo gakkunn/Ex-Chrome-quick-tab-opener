@@ -1,0 +1,91 @@
+{
+  "manifest_version": 3,
+  "name": "Quick Tab Opener",
+  "version": "1.0.0",
+  "description": "Open single URLs and groups of URLs using fully customizable keyboard shortcuts. By default, only the settings UI is bound (Ctrl+Shift+0).",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["storage", "tabs"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Configure URLs",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "options_ui": {
+    "page": "popup.html",
+    "open_in_tab": true
+  },
+  "commands": {
+    "open_ui": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+0",
+        "mac": "MacCtrl+Shift+0"
+      },
+      "description": "Open the settings UI"
+    },
+    "open_slot_1": {
+      "description": "Open URL in slot 1"
+    },
+    "open_slot_2": {
+      "description": "Open URL in slot 2"
+    },
+    "open_slot_3": {
+      "description": "Open URL in slot 3"
+    },
+    "open_slot_4": {
+      "description": "Open URL in slot 4"
+    },
+    "open_slot_5": {
+      "description": "Open URL in slot 5"
+    },
+    "open_slot_6": {
+      "description": "Open URL in slot 6"
+    },
+    "open_slot_7": {
+      "description": "Open URL in slot 7"
+    },
+    "open_slot_8": {
+      "description": "Open URL in slot 8"
+    },
+    "open_slot_9": {
+      "description": "Open URL in slot 9"
+    },
+    "open_group_1": {
+      "description": "Open all URLs in group 1"
+    },
+    "open_group_2": {
+      "description": "Open all URLs in group 2"
+    },
+    "open_group_3": {
+      "description": "Open all URLs in group 3"
+    },
+    "open_group_4": {
+      "description": "Open all URLs in group 4"
+    },
+    "open_group_5": {
+      "description": "Open all URLs in group 5"
+    },
+    "open_group_6": {
+      "description": "Open all URLs in group 6"
+    },
+    "open_group_7": {
+      "description": "Open all URLs in group 7"
+    },
+    "open_group_8": {
+      "description": "Open all URLs in group 8"
+    },
+    "open_group_9": {
+      "description": "Open all URLs in group 9"
+    }
+  }
+}
