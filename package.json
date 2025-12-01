@@ -1,0 +1,31 @@
+{
+  "name": "quick-tab-opener",
+  "version": "1.0.0",
+  "description": "Open single URLs and groups of URLs using fully customizable keyboard shortcuts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "esbuild src/popup/popup.ts src/background/background.ts --bundle --outdir=dist --entry-names=[name] --minify && npm run copy-public",
+    "watch": "esbuild src/popup/popup.ts src/background/background.ts --bundle --outdir=dist --entry-names=[name] --sourcemap --watch",
+    "copy-public": "cp -r public/* dist/",
+    "lint": "eslint \"src/**/*.ts\"",
+    "lint:fix": "eslint \"src/**/*.ts\" --fix",
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,md}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,tsx,js,jsx,json,css,md}\"",
+    "check": "npm run lint && npm run format:check",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/chrome": "^0.0.260",
+    "@typescript-eslint/eslint-plugin": "^8.47.0",
+    "@typescript-eslint/parser": "^8.47.0",
+    "esbuild": "^0.19.0",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "prettier": "^3.6.2",
+    "typescript": "^5.0.0",
+    "typescript-eslint": "^8.47.0"
+  }
+}
