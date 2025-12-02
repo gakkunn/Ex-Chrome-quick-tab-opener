@@ -1,7 +1,11 @@
 import { normalizeUrl } from '../utils/url';
-import { getPinDefault, getStorageData } from '../utils/storage';
-import { MAX_GROUP_ITEMS } from '../types/storage';
-import type { SlotId, GroupKey } from '../types/storage';
+import {
+  getPinDefault,
+  isValidGroupNumber,
+  isValidSlotNumber,
+  readGroup,
+  readSlot,
+} from '../utils/storage';
 
 type TabPlacement = {
   baseIndex?: number;
@@ -68,9 +72,7 @@ async function openUrls(urls: string[], pinned: boolean, activeFirst: boolean): 
 
 async function openSlot(n: number): Promise<void> {
   try {
-    const key: SlotId = `slot${n}` as SlotId;
-    const data = await getStorageData([key]);
-    const url = data[key];
+    const url = await readSlot(n);
 
     if (!url) {
       chrome.runtime.openOptionsPage();
@@ -86,16 +88,7 @@ async function openSlot(n: number): Promise<void> {
 
 async function openGroup(n: number): Promise<void> {
   try {
-    const key: GroupKey = `group${n}` as GroupKey;
-    const data = await getStorageData([key]);
-    const list = data[key];
-
-    const cleaned = Array.isArray(list)
-      ? list
-          .map((u) => String(u || '').trim())
-          .filter((u) => u.length > 0)
-          .slice(0, MAX_GROUP_ITEMS)
-      : [];
+    const cleaned = await readGroup(n);
 
     if (cleaned.length === 0) {
       chrome.runtime.openOptionsPage();
@@ -146,14 +139,19 @@ chrome.commands.onCommand.addListener((command) => {
   }
 
   const [, type, value] = match;
-  const slotNumber = Number.parseInt(value, 10);
-  if (Number.isNaN(slotNumber) || slotNumber < 1 || slotNumber > 9) {
+  const targetNumber = Number.parseInt(value, 10);
+
+  if (
+    Number.isNaN(targetNumber) ||
+    (type === 'slot' && !isValidSlotNumber(targetNumber)) ||
+    (type === 'group' && !isValidGroupNumber(targetNumber))
+  ) {
     return;
   }
 
   const handler = commandHandlers[type as CommandTarget];
   if (handler) {
-    void handler(slotNumber);
+    void handler(targetNumber);
   }
 });
 

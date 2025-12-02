@@ -1,5 +1,5 @@
 import { isValidUrl } from '../utils/url';
-import { getStorageData, setStorageData } from '../utils/storage';
+import { getStorageData, isValidGroupNumber, setStorageData } from '../utils/storage';
 import { SLOT_IDS, GROUP_KEYS, MAX_GROUP_ITEMS } from '../types/storage';
 import type { GroupKey, SlotId, StorageData } from '../types/storage';
 
@@ -9,11 +9,22 @@ type GroupContext = {
   n: number;
 };
 
-const getSlotInput = (id: SlotId): HTMLInputElement | null =>
-  document.getElementById(id) as HTMLInputElement | null;
+const getElementById = <T extends HTMLElement>(id: string): T | null =>
+  document.getElementById(id) as T | null;
+
+const getSlotInput = (id: SlotId): HTMLInputElement | null => getElementById<HTMLInputElement>(id);
+
+const getPinCheckbox = (): HTMLInputElement | null =>
+  getElementById<HTMLInputElement>('pinByDefault');
 
 const getGroupListElement = (n: number): HTMLElement | null =>
-  document.getElementById(`group${n}-list`);
+  getElementById<HTMLElement>(`group${n}-list`);
+
+const parseGroupIndex = (el: HTMLElement | null): number | null => {
+  if (!el) return null;
+  const value = Number.parseInt(el.getAttribute('data-group') || '', 10);
+  return isValidGroupNumber(value) ? value : null;
+};
 
 const forEachSlotInput = (
   callback: (input: HTMLInputElement, idx: number, id: SlotId) => void
@@ -98,7 +109,7 @@ async function load(): Promise<void> {
     input.value = data[id] ?? '';
   });
 
-  const pinEl = document.getElementById('pinByDefault') as HTMLInputElement | null;
+  const pinEl = getPinCheckbox();
   if (pinEl) {
     pinEl.checked = data.pinByDefault !== undefined ? Boolean(data.pinByDefault) : true;
   }
@@ -142,7 +153,7 @@ async function save(): Promise<void> {
     payload[id] = input.value.trim();
   });
 
-  const pinEl = document.getElementById('pinByDefault') as HTMLInputElement | null;
+  const pinEl = getPinCheckbox();
   if (pinEl) {
     payload.pinByDefault = Boolean(pinEl.checked);
   }
@@ -193,8 +204,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll<HTMLButtonElement>('button.add').forEach((btn) => {
     btn.addEventListener('click', () => {
-      const n = Number(btn.getAttribute('data-group') || '0');
-      if (n >= 1 && n <= 9) {
+      const n = parseGroupIndex(btn);
+      if (n) {
         addGroupItem(n);
       }
     });
@@ -209,8 +220,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll<HTMLButtonElement>('.toggle-group').forEach((btn) => {
     btn.addEventListener('click', () => {
-      const n = Number(btn.getAttribute('data-group') || '0');
-      if (n < 1 || n > 9) return;
+      const n = parseGroupIndex(btn);
+      if (!n) return;
 
       const listEl = getGroupListElement(n);
       if (!listEl) return;
