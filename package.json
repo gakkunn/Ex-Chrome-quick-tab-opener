@@ -5,7 +5,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "esbuild src/popup/popup.ts src/background/background.ts --bundle --outdir=dist --entry-names=[name] --minify && npm run copy-public",
+    "build": "esbuild src/popup/popup.ts src/background/background.ts --bundle --outdir=dist --entry-names=[name] --minify --drop:console --drop:debugger && npm run copy-public",
     "watch": "esbuild src/popup/popup.ts src/background/background.ts --bundle --outdir=dist --entry-names=[name] --sourcemap --watch",
     "copy-public": "cp -r public/* dist/",
     "lint": "eslint \"src/**/*.ts\"",
