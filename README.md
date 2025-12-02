@@ -4,7 +4,13 @@
 
 ## Overview
 
-Quick Tab Opener is a Chrome extension that enables you to open single URLs or groups of URLs using fully customizable keyboard shortcuts. Access your favorite websites instantly without manual typing or bookmark navigation.
+Quick Tab Opener lets you open single URLs or preset groups of URLs with customizable keyboard shortcuts so you can jump into your workflow without navigating bookmarks manually.
+
+Example:
+
+- Opens frequently used sites from either slot shortcuts (1–9) or grouped shortcuts.
+- Normalizes domain-only entries to secure HTTPS URLs before opening.
+- Provides a popup options UI backed by Chrome storage sync for quick reconfiguration.
 
 This is an open-source extension implemented based on Chrome Extension Manifest v3.
 
@@ -12,27 +18,26 @@ This is an open-source extension implemented based on Chrome Extension Manifest 
 
 ## Features
 
-- **9 URL Slots**: Store individual URLs that open with single keyboard shortcuts
-- **9 URL Groups**: Create groups of up to 10 URLs that open together
-- **Fully Customizable Shortcuts**: Configure any keyboard combination via Chrome settings
-- **Tab Pinning**: Option to automatically pin opened tabs
-- **Smart URL Handling**: Accepts both full URLs and domain names (auto-converts to HTTPS)
-- **Settings UI**: Easy-to-use popup interface (default: Ctrl+Shift+0)
-- **Badge Notifications**: Visual reminder when shortcuts need configuration
-- **Chrome Sync**: Settings automatically sync across your signed-in devices
-- **Zero Dependencies**: Lightweight, fast, and secure
+- Nine slots for single URLs along with nine groups that can open up to 10 tabs each.
+- Fully customizable keyboard shortcuts for each slot/group plus a shortcut to open the settings UI.
+- Optional pin-by-default behavior so opened tabs stay pinned if preferred.
+- Badge indicator on the toolbar icon alerts you when no shortcuts are configured yet.
+- Handles domain-only input by auto-prepending `https://` and blocks unsafe schemes.
 
 ---
 
 ## Screenshots
 
-_(Screenshots will be added in a future update)_
+| Screen                                          | 
+| ----------------------------------------------- | 
+| ![screenshot-1](./docs/screenshot-1.png) | 
+| ![screenshot-2](./docs/screenshot-2.png) |
 
 ---
 
 ## Installation
 
-> Not yet published to the Chrome Web Store.
+> ℹ️ **Not yet published to the Chrome Web Store.**  
 > You can use it via "Local Installation (Developer Mode)" below.
 
 ### 1. Clone the repository
@@ -55,27 +60,25 @@ npm run build
 2. Go to `chrome://extensions/`
 3. Toggle **"Developer mode"** on in the top right corner
 4. Click **"Load unpacked"**
-5. Select the **`dist/`** folder from this project
+5. Select the `dist/` folder of this project
 
 ---
 
 ## Usage
 
 1. After installing the extension, pin the icon from the Chrome toolbar.
-2. Click the icon or press **Ctrl+Shift+0** (or **MacCtrl+Shift+0** on Mac) to open settings.
+2. Click the icon or press **Ctrl+Shift+0** (or **MacCtrl+Shift+0** on macOS) to open the popup options UI.
 3. Configure your URL slots and groups:
-   - **Slots**: Enter single URLs (e.g., `https://github.com` or just `github.com`)
-   - **Groups**: Enter up to 10 URLs per group
-4. Go to `chrome://extensions/shortcuts` to set keyboard shortcuts for each slot and group.
-5. Recommended shortcuts:
-   - **Slots**: Ctrl+1 through Ctrl+9
-   - **Groups**: Ctrl+Shift+1 through Ctrl+Shift+9
-6. Press your configured shortcuts to instantly open URLs!
+   - **Slots**: Enter single URLs (e.g., `https://github.com` or `github.com`)
+   - **Groups**: Enter up to 10 URLs per group to open together
+4. Visit `chrome://extensions/shortcuts` to bind keyboard shortcuts for each slot and group.
+5. Press your configured shortcut to open the desired URL(s), with the option to pin tabs by default.
 
 **Tips**:
-- Enable "Pin tabs by default" to automatically pin all opened tabs
-- Domain names (e.g., `example.com`) are automatically converted to HTTPS URLs
-- The extension badge shows a red "!" if no shortcuts are configured yet
+
+- Enable "Pin tabs by default" if you want every opened tab to stay pinned.
+- Use `Ctrl+1`–`Ctrl+9` for slots and `Ctrl+Shift+1`–`Ctrl+Shift+9` for groups for muscle memory.
+- The badge shows a red `!` when no shortcuts are assigned yet to remind you to configure them.
 
 ---
 
@@ -93,26 +96,19 @@ git clone https://github.com/gakkunn/Ex-Chrome-quick-tab-opener.git
 cd Ex-Chrome-quick-tab-opener
 
 npm install
-npm run watch   # For development with auto-rebuild
+npm run watch   # or run npm run build for a production bundle
 ```
 
 ### Build Commands
 
-- `npm run build` - Production build (minified)
-- `npm run watch` - Development build with auto-reload
-- `npm run lint` - Run ESLint
-- `npm run lint:fix` - Auto-fix ESLint issues
-- `npm run format` - Format with Prettier
-- `npm run format:check` - Check formatting
-- `npm run check` - Run lint + format checks
-- `npm run typecheck` - TypeScript type checking
-
-### Testing Changes
-
-1. Make code changes in the `src/` directory
-2. Build updates with `npm run build` (or use `npm run watch` for auto-rebuild)
-3. Go to `chrome://extensions/` and click the refresh icon for Quick Tab Opener
-4. Test your changes
+- `npm run build` – production bundle with minification and copying `public/`.
+- `npm run watch` – development build with watch mode and sourcemaps.
+- `npm run lint` – run ESLint across the TypeScript sources.
+- `npm run lint:fix` – auto-fix lintable issues.
+- `npm run format` – format files via Prettier.
+- `npm run format:check` – verify formatting without writing changes.
+- `npm run check` – run lint plus format checks.
+- `npm run typecheck` – TypeScript compilation check without emitting output.
 
 ---
 
@@ -121,34 +117,35 @@ npm run watch   # For development with auto-rebuild
 ```text
 Ex-Chrome-quick-tab-opener/
   src/                  # Extension source code
-    background/         # Service worker (command handling)
-      background.ts     # Keyboard command event handling
-    popup/              # Settings UI logic
-      popup.ts          # Configuration interface
-    styles/             # CSS styles
-      popup.css         # UI styling
-    types/              # TypeScript type definitions
-      storage.ts        # Storage type definitions
-    utils/              # Utility functions
-      storage.ts        # Chrome storage utilities
-      url.ts            # URL validation and normalization
-  public/               # Static files
-    popup.html          # Settings UI HTML
-    manifest.json       # Extension manifest (v3)
-    icons/              # Extension icons (16, 48, 128px)
-  dist/                 # Build output (load this in Chrome)
-  package.json          # Dependencies and scripts
+    background/         # Service worker handling keyboard commands
+      background.ts
+    popup/              # Popup UI logic and state handling
+      popup.ts
+    styles/             # Popup styles
+      popup.css
+    types/              # Types for storage and commands
+      storage.ts
+    utils/              # Storage helpers and URL normalizers
+      storage.ts
+      url.ts
+  public/               # Static assets, manifest, icons, and HTML
+    popup.html
+    manifest.json
+    icons/
+  dist/                 # Build output (load this directory in Chrome)
+  docs/                 # Screenshot requirements and supporting assets
+  package.json          # Dependencies and npm scripts
   tsconfig.json         # TypeScript configuration
-  .eslintrc.cjs         # ESLint configuration
-  .prettierrc           # Prettier configuration
+  README.md
+  LICENSE
+  PRIVACY_POLICY.md
 ```
 
 ---
 
 ## Contributing
 
-Bug reports, feature suggestions, and pull requests are welcome!
-
+Bug reports, feature suggestions, and pull requests are welcome 🎉  
 Please refer to [CONTRIBUTING.md](./CONTRIBUTING.md) for detailed guidelines.
 
 Quick steps:
@@ -158,6 +155,12 @@ Quick steps:
 3. Create a branch (e.g., `feat/xxx`, `fix/yyy`)
 4. Commit changes and push
 5. Create a Pull Request
+
+---
+
+## Privacy Policy
+Quick Tab Opener does not collect personally identifiable information or transmit browsing data to external servers.  
+For details, please see our [Privacy Policy](./PRIVACY_POLICY.md).
 
 ---
 
