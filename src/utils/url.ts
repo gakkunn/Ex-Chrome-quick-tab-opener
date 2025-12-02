@@ -1,9 +1,29 @@
+// Dangerous URL schemes that should be blocked
+const DANGEROUS_SCHEMES = [
+  'javascript:',
+  'data:',
+  'file:',
+  'vbscript:',
+  'about:',
+  'blob:',
+  'filesystem:',
+];
+
+// Only allow HTTP and HTTPS protocols
+const SAFE_SCHEMES = ['http:', 'https:'];
+
 export function isValidUrl(str: string): boolean {
   if (!str || str.trim().length === 0) {
     return false;
   }
 
   const trimmed = str.trim();
+  const lowerCased = trimmed.toLowerCase();
+
+  // Explicitly block dangerous schemes
+  if (DANGEROUS_SCHEMES.some((scheme) => lowerCased.startsWith(scheme))) {
+    return false;
+  }
 
   // URL pattern regex - matches http(s):// URLs or domain names
   const urlPattern =
@@ -16,13 +36,14 @@ export function isValidUrl(str: string): boolean {
 
   // Additional validation using URL constructor
   try {
-    new URL(trimmed);
-    return true;
+    const parsed = new URL(trimmed);
+    // Verify the protocol is safe
+    return SAFE_SCHEMES.includes(parsed.protocol);
   } catch {
     // Try with https:// prefix for domain names
     try {
-      new URL(`https://${trimmed}`);
-      return true;
+      const parsed = new URL(`https://${trimmed}`);
+      return parsed.protocol === 'https:';
     } catch {
       return false;
     }
@@ -30,10 +51,18 @@ export function isValidUrl(str: string): boolean {
 }
 
 export function normalizeUrl(url: string): string {
+  const trimmed = url.trim();
+
   try {
-    new URL(url);
-    return url;
+    const parsed = new URL(trimmed);
+    // Only allow safe schemes
+    if (SAFE_SCHEMES.includes(parsed.protocol)) {
+      return trimmed;
+    }
+    // If scheme is unsafe, force https
+    return `https://${trimmed}`;
   } catch {
-    return `https://${url}`;
+    // If URL parsing fails, add https:// prefix
+    return `https://${trimmed}`;
   }
 }
