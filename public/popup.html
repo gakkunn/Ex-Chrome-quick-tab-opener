@@ -3,83 +3,146 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Quick Tab Opener Settings</title>
+    <title data-i18n="popup_title">Quick Tab Opener Settings</title>
     <link rel="stylesheet" href="popup.css" />
   </head>
   <body>
     <main class="container">
       <div class="header">
-        <button id="save" class="save-button">Save</button>
+        <button id="save" class="save-button" data-i18n="button_save">Save</button>
       </div>
       <div id="msg"><small></small></div>
 
       <div class="shortcuts-banner">
-        First you should set shortcuts at
+        <span data-i18n="shortcuts_banner_line1">First you should set shortcuts at</span>
         <code><a href="#" class="shortcuts-link">chrome://extensions/shortcuts</a></code>.<br />
-        Default: settings <span class="kbd">Ctrl+Shift+0</span>. Set all other shortcuts manually (e.g. single URL
-        <span class="kbd">Ctrl+1</span>, URL group <span class="kbd">Ctrl+Shift+1</span>, etc.).<br />
+        <span
+          data-i18n="shortcuts_banner_line2"
+          data-i18n-html="true"
+          data-i18n-subs="<span class='kbd'>Ctrl+Shift+0</span>,<span class='kbd'>Ctrl+1</span>,<span class='kbd'>Ctrl+Shift+1</span>"
+          >Default: settings <span class="kbd">Ctrl+Shift+0</span>. Set all other shortcuts manually (e.g. single URL <span class="kbd">Ctrl+1</span>, URL group <span class="kbd">Ctrl+Shift+1</span>, etc.).</span
+        >
       </div>
 
       <div class="row" style="margin-bottom: 24px;">
         <input id="pinByDefault" type="checkbox" checked />
-        <label for="pinByDefault" style="cursor: pointer; margin-top: 0; font-size: 14px; font-weight: 600;">Open as pinned tabs</label>
+        <label for="pinByDefault" style="cursor: pointer; margin-top: 0; font-size: 14px; font-weight: 600;" data-i18n="label_open_as_pinned">Open as pinned tabs</label>
       </div>
 
-      <h3>URL Slots (up to 9)</h3>
+      <h3 data-i18n="section_url_slots">URL Slots (up to 9)</h3>
 
       <div class="row">
-        <label for="slot1">Slot 1 (<span class="kbd">Ctrl+1</span> recommended, set manually)</label>
+        <label
+          for="slot1"
+          data-i18n="label_slot"
+          data-i18n-html="true"
+          data-i18n-subs="1,<span class='kbd'>Ctrl+1</span>"
+          >Slot 1 (<span class="kbd">Ctrl+1</span> recommended, set manually)</label
+        >
       </div>
-      <input id="slot1" type="text" placeholder="Example: https://example.com" />
+      <input id="slot1" type="text" data-i18n-placeholder="placeholder_url" placeholder="Example: https://example.com" />
 
       <div class="row">
-        <label for="slot2">Slot 2 (<span class="kbd">Ctrl+2</span> recommended, set manually)</label>
+        <label
+          for="slot2"
+          data-i18n="label_slot"
+          data-i18n-html="true"
+          data-i18n-subs="2,<span class='kbd'>Ctrl+2</span>"
+          >Slot 2 (<span class="kbd">Ctrl+2</span> recommended, set manually)</label
+        >
       </div>
-      <input id="slot2" type="text" placeholder="Example: mail.google.com" />
+      <input id="slot2" type="text" data-i18n-placeholder="placeholder_url" placeholder="Example: mail.google.com" />
 
       <div class="row">
-        <label for="slot3">Slot 3 (<span class="kbd">Ctrl+3</span> recommended, set manually)</label>
+        <label
+          for="slot3"
+          data-i18n="label_slot"
+          data-i18n-html="true"
+          data-i18n-subs="3,<span class='kbd'>Ctrl+3</span>"
+          >Slot 3 (<span class="kbd">Ctrl+3</span> recommended, set manually)</label
+        >
       </div>
-      <input id="slot3" type="text" placeholder="Example: https://calendar.google.com" />
+      <input id="slot3" type="text" data-i18n-placeholder="placeholder_url" placeholder="Example: https://calendar.google.com" />
 
       <div class="row">
-        <label for="slot4">Slot 4 (<span class="kbd">Ctrl+4</span> recommended, set manually)</label>
+        <label
+          for="slot4"
+          data-i18n="label_slot"
+          data-i18n-html="true"
+          data-i18n-subs="4,<span class='kbd'>Ctrl+4</span>"
+          >Slot 4 (<span class="kbd">Ctrl+4</span> recommended, set manually)</label
+        >
       </div>
-      <input id="slot4" type="text" placeholder="Example: https://news.ycombinator.com" />
+      <input id="slot4" type="text" data-i18n-placeholder="placeholder_url" placeholder="Example: https://news.ycombinator.com" />
 
       <div class="row">
-        <label for="slot5">Slot 5 (<span class="kbd">Ctrl+5</span> recommended, set manually)</label>
+        <label
+          for="slot5"
+          data-i18n="label_slot"
+          data-i18n-html="true"
+          data-i18n-subs="5,<span class='kbd'>Ctrl+5</span>"
+          >Slot 5 (<span class="kbd">Ctrl+5</span> recommended, set manually)</label
+        >
       </div>
-      <input id="slot5" type="text" placeholder="Example: https://drive.google.com" />
+      <input id="slot5" type="text" data-i18n-placeholder="placeholder_url" placeholder="Example: https://drive.google.com" />
 
       <div class="row">
-        <label for="slot6">Slot 6 (<span class="kbd">Ctrl+6</span> recommended, set manually)</label>
+        <label
+          for="slot6"
+          data-i18n="label_slot"
+          data-i18n-html="true"
+          data-i18n-subs="6,<span class='kbd'>Ctrl+6</span>"
+          >Slot 6 (<span class="kbd">Ctrl+6</span> recommended, set manually)</label
+        >
       </div>
-      <input id="slot6" type="text" placeholder="Example: https://github.com" />
+      <input id="slot6" type="text" data-i18n-placeholder="placeholder_url" placeholder="Example: https://github.com" />
 
       <div class="row">
-        <label for="slot7">Slot 7 (<span class="kbd">Ctrl+7</span> recommended, set manually)</label>
+        <label
+          for="slot7"
+          data-i18n="label_slot"
+          data-i18n-html="true"
+          data-i18n-subs="7,<span class='kbd'>Ctrl+7</span>"
+          >Slot 7 (<span class="kbd">Ctrl+7</span> recommended, set manually)</label
+        >
       </div>
-      <input id="slot7" type="text" placeholder="Example: https://calendar.google.com/tasks" />
+      <input id="slot7" type="text" data-i18n-placeholder="placeholder_url" placeholder="Example: https://calendar.google.com/tasks" />
 
       <div class="row">
-        <label for="slot8">Slot 8 (<span class="kbd">Ctrl+8</span> recommended, set manually)</label>
+        <label
+          for="slot8"
+          data-i18n="label_slot"
+          data-i18n-html="true"
+          data-i18n-subs="8,<span class='kbd'>Ctrl+8</span>"
+          >Slot 8 (<span class="kbd">Ctrl+8</span> recommended, set manually)</label
+        >
       </div>
-      <input id="slot8" type="text" placeholder="Example: https://tweetdeck.twitter.com" />
+      <input id="slot8" type="text" data-i18n-placeholder="placeholder_url" placeholder="Example: https://tweetdeck.twitter.com" />
 
       <div class="row">
-        <label for="slot9">Slot 9 (<span class="kbd">Ctrl+9</span> recommended, set manually)</label>
+        <label
+          for="slot9"
+          data-i18n="label_slot"
+          data-i18n-html="true"
+          data-i18n-subs="9,<span class='kbd'>Ctrl+9</span>"
+          >Slot 9 (<span class="kbd">Ctrl+9</span> recommended, set manually)</label
+        >
       </div>
-      <input id="slot9" type="text" placeholder="Example: https://asana.com" />
+      <input id="slot9" type="text" data-i18n-placeholder="placeholder_url" placeholder="Example: https://asana.com" />
 
-      <h3>URL groups (up to 10 URLs each)</h3>
+      <h3 data-i18n="section_url_groups">URL groups (up to 10 URLs each)</h3>
 
       <div id="groups">
         <div class="group">
           <div class="group-header">
             <button class="toggle-group" data-group="1" aria-expanded="false">▼</button>
-            <label>Group 1 (<span class="kbd">Ctrl+Shift+1</span> recommended, set manually)</label>
-            <button class="add hidden" data-group="1">Add</button>
+            <label
+              data-i18n="label_group"
+              data-i18n-html="true"
+              data-i18n-subs="1,<span class='kbd'>Ctrl+Shift+1</span>"
+              >Group 1 (<span class="kbd">Ctrl+Shift+1</span> recommended, set manually)</label
+            >
+            <button class="add hidden" data-group="1" data-i18n="button_add">Add</button>
           </div>
           <div id="group1-list" class="group-list collapsed"></div>
         </div>
@@ -87,8 +150,13 @@
         <div class="group">
           <div class="group-header">
             <button class="toggle-group" data-group="2" aria-expanded="false">▼</button>
-            <label>Group 2 (<span class="kbd">Ctrl+Shift+2</span> recommended, set manually)</label>
-            <button class="add hidden" data-group="2">Add</button>
+            <label
+              data-i18n="label_group"
+              data-i18n-html="true"
+              data-i18n-subs="2,<span class='kbd'>Ctrl+Shift+2</span>"
+              >Group 2 (<span class="kbd">Ctrl+Shift+2</span> recommended, set manually)</label
+            >
+            <button class="add hidden" data-group="2" data-i18n="button_add">Add</button>
           </div>
           <div id="group2-list" class="group-list collapsed"></div>
         </div>
@@ -96,8 +164,13 @@
         <div class="group">
           <div class="group-header">
             <button class="toggle-group" data-group="3" aria-expanded="false">▼</button>
-            <label>Group 3 (<span class="kbd">Ctrl+Shift+3</span> recommended, set manually)</label>
-            <button class="add hidden" data-group="3">Add</button>
+            <label
+              data-i18n="label_group"
+              data-i18n-html="true"
+              data-i18n-subs="3,<span class='kbd'>Ctrl+Shift+3</span>"
+              >Group 3 (<span class="kbd">Ctrl+Shift+3</span> recommended, set manually)</label
+            >
+            <button class="add hidden" data-group="3" data-i18n="button_add">Add</button>
           </div>
           <div id="group3-list" class="group-list collapsed"></div>
         </div>
@@ -105,8 +178,13 @@
         <div class="group">
           <div class="group-header">
             <button class="toggle-group" data-group="4" aria-expanded="false">▼</button>
-            <label>Group 4 (<span class="kbd">Ctrl+Shift+4</span> recommended, set manually)</label>
-            <button class="add hidden" data-group="4">Add</button>
+            <label
+              data-i18n="label_group"
+              data-i18n-html="true"
+              data-i18n-subs="4,<span class='kbd'>Ctrl+Shift+4</span>"
+              >Group 4 (<span class="kbd">Ctrl+Shift+4</span> recommended, set manually)</label
+            >
+            <button class="add hidden" data-group="4" data-i18n="button_add">Add</button>
           </div>
           <div id="group4-list" class="group-list collapsed"></div>
         </div>
@@ -114,8 +192,13 @@
         <div class="group">
           <div class="group-header">
             <button class="toggle-group" data-group="5" aria-expanded="false">▼</button>
-            <label>Group 5 (<span class="kbd">Ctrl+Shift+5</span> recommended, set manually)</label>
-            <button class="add hidden" data-group="5">Add</button>
+            <label
+              data-i18n="label_group"
+              data-i18n-html="true"
+              data-i18n-subs="5,<span class='kbd'>Ctrl+Shift+5</span>"
+              >Group 5 (<span class="kbd">Ctrl+Shift+5</span> recommended, set manually)</label
+            >
+            <button class="add hidden" data-group="5" data-i18n="button_add">Add</button>
           </div>
           <div id="group5-list" class="group-list collapsed"></div>
         </div>
@@ -123,8 +206,13 @@
         <div class="group">
           <div class="group-header">
             <button class="toggle-group" data-group="6" aria-expanded="false">▼</button>
-            <label>Group 6 (<span class="kbd">Ctrl+Shift+6</span> recommended, set manually)</label>
-            <button class="add hidden" data-group="6">Add</button>
+            <label
+              data-i18n="label_group"
+              data-i18n-html="true"
+              data-i18n-subs="6,<span class='kbd'>Ctrl+Shift+6</span>"
+              >Group 6 (<span class="kbd">Ctrl+Shift+6</span> recommended, set manually)</label
+            >
+            <button class="add hidden" data-group="6" data-i18n="button_add">Add</button>
           </div>
           <div id="group6-list" class="group-list collapsed"></div>
         </div>
@@ -132,8 +220,13 @@
         <div class="group">
           <div class="group-header">
             <button class="toggle-group" data-group="7" aria-expanded="false">▼</button>
-            <label>Group 7 (<span class="kbd">Ctrl+Shift+7</span> recommended, set manually)</label>
-            <button class="add hidden" data-group="7">Add</button>
+            <label
+              data-i18n="label_group"
+              data-i18n-html="true"
+              data-i18n-subs="7,<span class='kbd'>Ctrl+Shift+7</span>"
+              >Group 7 (<span class="kbd">Ctrl+Shift+7</span> recommended, set manually)</label
+            >
+            <button class="add hidden" data-group="7" data-i18n="button_add">Add</button>
           </div>
           <div id="group7-list" class="group-list collapsed"></div>
         </div>
@@ -141,8 +234,13 @@
         <div class="group">
           <div class="group-header">
             <button class="toggle-group" data-group="8" aria-expanded="false">▼</button>
-            <label>Group 8 (<span class="kbd">Ctrl+Shift+8</span> recommended, set manually)</label>
-            <button class="add hidden" data-group="8">Add</button>
+            <label
+              data-i18n="label_group"
+              data-i18n-html="true"
+              data-i18n-subs="8,<span class='kbd'>Ctrl+Shift+8</span>"
+              >Group 8 (<span class="kbd">Ctrl+Shift+8</span> recommended, set manually)</label
+            >
+            <button class="add hidden" data-group="8" data-i18n="button_add">Add</button>
           </div>
           <div id="group8-list" class="group-list collapsed"></div>
         </div>
@@ -150,8 +248,13 @@
         <div class="group">
           <div class="group-header">
             <button class="toggle-group" data-group="9" aria-expanded="false">▼</button>
-            <label>Group 9 (<span class="kbd">Ctrl+Shift+9</span> recommended, set manually)</label>
-            <button class="add hidden" data-group="9">Add</button>
+            <label
+              data-i18n="label_group"
+              data-i18n-html="true"
+              data-i18n-subs="9,<span class='kbd'>Ctrl+Shift+9</span>"
+              >Group 9 (<span class="kbd">Ctrl+Shift+9</span> recommended, set manually)</label
+            >
+            <button class="add hidden" data-group="9" data-i18n="button_add">Add</button>
           </div>
           <div id="group9-list" class="group-list collapsed"></div>
         </div>

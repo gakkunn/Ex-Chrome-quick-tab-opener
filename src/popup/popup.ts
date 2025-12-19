@@ -9,6 +9,68 @@ type GroupContext = {
   n: number;
 };
 
+// i18n helper function
+const getMessage = (key: string, substitutions?: string | string[]): string => {
+  return chrome.i18n.getMessage(key, substitutions) || key;
+};
+
+const setDocumentLanguage = (): void => {
+  const locale = chrome.i18n.getMessage('@@ui_locale') || 'en';
+  document.documentElement.lang = locale;
+
+  const dir = chrome.i18n.getMessage('@@bidi_dir');
+  if (dir === 'rtl' || dir === 'ltr') {
+    document.documentElement.dir = dir;
+  } else {
+    document.documentElement.removeAttribute('dir');
+  }
+};
+
+const getSubstitutions = (el: HTMLElement): string | string[] | undefined => {
+  const subs = el.getAttribute('data-i18n-subs');
+  return subs ? subs.split(',') : undefined;
+};
+
+// Initialize i18n for static HTML elements
+function initI18n(): void {
+  // Update document title
+  const titleEl = document.querySelector('title[data-i18n]');
+  if (titleEl) {
+    const key = titleEl.getAttribute('data-i18n');
+    if (key) {
+      document.title = getMessage(key);
+    }
+  }
+
+  // Update elements with data-i18n attribute
+  document.querySelectorAll<HTMLElement>('[data-i18n]').forEach((el) => {
+    const key = el.getAttribute('data-i18n');
+    if (!key) return;
+
+    const substitutions = getSubstitutions(el);
+    const message = getMessage(key, substitutions);
+
+    if (el.tagName === 'TITLE') {
+      document.title = message;
+    } else {
+      const allowHtml = el.getAttribute('data-i18n-html');
+      if (allowHtml !== null && allowHtml !== 'false') {
+        el.innerHTML = message;
+      } else {
+        el.textContent = message;
+      }
+    }
+  });
+
+  // Update placeholders
+  document.querySelectorAll<HTMLInputElement>('[data-i18n-placeholder]').forEach((el) => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (key) {
+      el.placeholder = getMessage(key);
+    }
+  });
+}
+
 const getElementById = <T extends HTMLElement>(id: string): T | null =>
   document.getElementById(id) as T | null;
 
@@ -62,7 +124,7 @@ function addGroupItem(n: number, value = ''): void {
   if (!listEl) return;
 
   if (listEl.children.length >= MAX_GROUP_ITEMS) {
-    show(`Error: Group ${n} can contain up to ${MAX_GROUP_ITEMS} URLs.`, true);
+    show(getMessage('error_max_urls', [String(n), String(MAX_GROUP_ITEMS)]), true);
     return;
   }
 
@@ -71,12 +133,12 @@ function addGroupItem(n: number, value = ''): void {
 
   const input = document.createElement('input');
   input.type = 'text';
-  input.placeholder = 'Example: https://example.com';
+  input.placeholder = getMessage('placeholder_url');
   input.value = value;
   input.style.flex = '1 1 auto';
 
   const del = document.createElement('button');
-  del.textContent = 'Delete';
+  del.textContent = getMessage('button_delete');
   del.addEventListener('click', () => {
     row.remove();
   });
@@ -126,14 +188,14 @@ async function save(): Promise<void> {
   forEachSlotInput((input, idx) => {
     const value = input.value.trim();
     if (value.length > 0 && !isValidUrl(value)) {
-      errors.push(`Slot ${idx + 1} contains an invalid URL: "${value}"`);
+      errors.push(getMessage('error_invalid_slot_url', [String(idx + 1), value]));
     }
   });
 
   forEachGroupList((listEl, { n }) => {
     collectGroupValues(listEl).forEach((value, inputIdx) => {
       if (value.length > 0 && !isValidUrl(value)) {
-        errors.push(`Group ${n} URL ${inputIdx + 1} is invalid: "${value}"`);
+        errors.push(getMessage('error_invalid_group_url', [String(n), String(inputIdx + 1), value]));
       }
     });
   });
@@ -142,7 +204,7 @@ async function save(): Promise<void> {
     const errorMessage =
       errors.length === 1
         ? errors[0]
-        : `${errors.length} errors found:\n${errors.slice(0, 5).join('\n')}${errors.length > 5 ? `\n...and ${errors.length - 5} more` : ''}`;
+        : `${getMessage('error_count', [String(errors.length)])}\n${errors.slice(0, 5).join('\n')}${errors.length > 5 ? `\n${getMessage('error_and_more', [String(errors.length - 5)])}` : ''}`;
     show(errorMessage, true);
     return;
   }
@@ -171,7 +233,7 @@ async function save(): Promise<void> {
     cleanEmptyGroupRows(listEl);
   });
 
-  show('Saved.');
+  show(getMessage('msg_saved'));
 }
 
 function show(text: string, isError = false): void {
@@ -200,6 +262,10 @@ function show(text: string, isError = false): void {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  setDocumentLanguage();
+  // Initialize i18n first
+  initI18n();
+
   load();
 
   document.querySelectorAll<HTMLButtonElement>('button.add').forEach((btn) => {
