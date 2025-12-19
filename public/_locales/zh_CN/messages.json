@@ -1,0 +1,243 @@
+{
+  "extension_name": {
+    "message": "Quick Tab Opener",
+    "description": "浏览器中显示的扩展程序名称"
+  },
+  "extension_description": {
+    "message": "使用完全可自定义的键盘快捷键快速打开单个网址或网址组。",
+    "description": "浏览器和网上应用店中显示的扩展程序说明"
+  },
+  "action_title": {
+    "message": "配置网址",
+    "description": "将鼠标悬停在工具栏中的扩展程序图标上时显示的工具提示"
+  },
+  "command_open_ui": {
+    "message": "打开设置界面",
+    "description": "打开设置的键盘快捷键说明"
+  },
+  "command_open_slot_1": {
+    "message": "打开插槽 1 中的网址",
+    "description": "打开插槽 1 的键盘快捷键说明"
+  },
+  "command_open_slot_2": {
+    "message": "打开插槽 2 中的网址",
+    "description": "打开插槽 2 的键盘快捷键说明"
+  },
+  "command_open_slot_3": {
+    "message": "打开插槽 3 中的网址",
+    "description": "打开插槽 3 的键盘快捷键说明"
+  },
+  "command_open_slot_4": {
+    "message": "打开插槽 4 中的网址",
+    "description": "打开插槽 4 的键盘快捷键说明"
+  },
+  "command_open_slot_5": {
+    "message": "打开插槽 5 中的网址",
+    "description": "打开插槽 5 的键盘快捷键说明"
+  },
+  "command_open_slot_6": {
+    "message": "打开插槽 6 中的网址",
+    "description": "打开插槽 6 的键盘快捷键说明"
+  },
+  "command_open_slot_7": {
+    "message": "打开插槽 7 中的网址",
+    "description": "打开插槽 7 的键盘快捷键说明"
+  },
+  "command_open_slot_8": {
+    "message": "打开插槽 8 中的网址",
+    "description": "打开插槽 8 的键盘快捷键说明"
+  },
+  "command_open_slot_9": {
+    "message": "打开插槽 9 中的网址",
+    "description": "打开插槽 9 的键盘快捷键说明"
+  },
+  "command_open_group_1": {
+    "message": "打开组 1 中的所有网址",
+    "description": "打开组 1 的键盘快捷键说明"
+  },
+  "command_open_group_2": {
+    "message": "打开组 2 中的所有网址",
+    "description": "打开组 2 的键盘快捷键说明"
+  },
+  "command_open_group_3": {
+    "message": "打开组 3 中的所有网址",
+    "description": "打开组 3 的键盘快捷键说明"
+  },
+  "command_open_group_4": {
+    "message": "打开组 4 中的所有网址",
+    "description": "打开组 4 的键盘快捷键说明"
+  },
+  "command_open_group_5": {
+    "message": "打开组 5 中的所有网址",
+    "description": "打开组 5 的键盘快捷键说明"
+  },
+  "command_open_group_6": {
+    "message": "打开组 6 中的所有网址",
+    "description": "打开组 6 的键盘快捷键说明"
+  },
+  "command_open_group_7": {
+    "message": "打开组 7 中的所有网址",
+    "description": "打开组 7 的键盘快捷键说明"
+  },
+  "command_open_group_8": {
+    "message": "打开组 8 中的所有网址",
+    "description": "打开组 8 的键盘快捷键说明"
+  },
+  "command_open_group_9": {
+    "message": "打开组 9 中的所有网址",
+    "description": "打开组 9 的键盘快捷键说明"
+  },
+  "popup_title": {
+    "message": "Quick Tab Opener 设置",
+    "description": "设置弹出页面的标题"
+  },
+  "button_save": {
+    "message": "保存",
+    "description": "保存按钮的标签"
+  },
+  "button_add": {
+    "message": "添加",
+    "description": "在组中添加网址的按钮标签"
+  },
+  "button_delete": {
+    "message": "删除",
+    "description": "在组中删除网址的按钮标签"
+  },
+  "shortcuts_banner_line1": {
+    "message": "请先设置快捷键：",
+    "description": "快捷键横幅的第一行"
+  },
+  "shortcuts_banner_line2": {
+    "message": "默认：设置 $1。请手动设置其他快捷键（例如：单个网址 $2，网址组 $3 等）。",
+    "description": "包含键盘快捷键占位符的快捷键横幅第二行",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "Ctrl+Shift+0"
+      },
+      "2": {
+        "content": "$2",
+        "example": "Ctrl+1"
+      },
+      "3": {
+        "content": "$3",
+        "example": "Ctrl+Shift+1"
+      }
+    }
+  },
+  "label_open_as_pinned": {
+    "message": "以固定标签页打开",
+    "description": "以固定方式打开标签页的复选框标签"
+  },
+  "section_url_slots": {
+    "message": "网址插槽（最多 9 个）",
+    "description": "网址插槽部分的标题"
+  },
+  "section_url_groups": {
+    "message": "网址组（每组最多 10 个）",
+    "description": "网址组部分的标题"
+  },
+  "label_slot": {
+    "message": "插槽 $1（建议使用 $2，需手动设置）",
+    "description": "每个网址插槽的标签",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "1"
+      },
+      "2": {
+        "content": "$2",
+        "example": "Ctrl+1"
+      }
+    }
+  },
+  "label_group": {
+    "message": "组 $1（建议使用 $2，需手动设置）",
+    "description": "每个网址组的标签",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "1"
+      },
+      "2": {
+        "content": "$2",
+        "example": "Ctrl+Shift+1"
+      }
+    }
+  },
+  "placeholder_url": {
+    "message": "示例：https://example.com",
+    "description": "网址输入框的占位符文本"
+  },
+  "msg_saved": {
+    "message": "已保存。",
+    "description": "保存设置后显示的成功消息"
+  },
+  "error_max_urls": {
+    "message": "错误：组 $1 最多只能包含 $2 个网址。",
+    "description": "超出组内网址最大数量时的错误消息",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "1"
+      },
+      "2": {
+        "content": "$2",
+        "example": "10"
+      }
+    }
+  },
+  "error_invalid_slot_url": {
+    "message": "插槽 $1 包含无效网址：'$2'",
+    "description": "插槽中存在无效网址时的错误消息",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "1"
+      },
+      "2": {
+        "content": "$2",
+        "example": "not-a-url"
+      }
+    }
+  },
+  "error_invalid_group_url": {
+    "message": "组 $1 的网址 $2 无效：'$3'",
+    "description": "组中存在无效网址时的错误消息",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "1"
+      },
+      "2": {
+        "content": "$2",
+        "example": "3"
+      },
+      "3": {
+        "content": "$3",
+        "example": "not-a-url"
+      }
+    }
+  },
+  "error_count": {
+    "message": "发现 $1 个错误：",
+    "description": "多个错误消息的标题",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "error_and_more": {
+    "message": "……还有 $1 个",
+    "description": "显示未列出的其他错误的后缀",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  }
+}
+

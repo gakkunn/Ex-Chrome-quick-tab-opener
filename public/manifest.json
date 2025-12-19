@@ -1,8 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "Quick Tab Opener",
+  "name": "__MSG_extension_name__",
   "version": "1.0.0",
-  "description": "Open single URLs and groups of URLs using fully customizable keyboard shortcuts.",
+  "description": "__MSG_extension_description__",
+  "default_locale": "en",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
@@ -14,7 +15,7 @@
   },
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Configure URLs",
+    "default_title": "__MSG_action_title__",
     "default_icon": {
       "16": "icons/icon16.png",
       "48": "icons/icon48.png",
@@ -31,61 +32,61 @@
         "default": "Ctrl+Shift+0",
         "mac": "MacCtrl+Shift+0"
       },
-      "description": "Open the settings UI"
+      "description": "__MSG_command_open_ui__"
     },
     "open_slot_1": {
-      "description": "Open URL in slot 1"
+      "description": "__MSG_command_open_slot_1__"
     },
     "open_slot_2": {
-      "description": "Open URL in slot 2"
+      "description": "__MSG_command_open_slot_2__"
     },
     "open_slot_3": {
-      "description": "Open URL in slot 3"
+      "description": "__MSG_command_open_slot_3__"
     },
     "open_slot_4": {
-      "description": "Open URL in slot 4"
+      "description": "__MSG_command_open_slot_4__"
     },
     "open_slot_5": {
-      "description": "Open URL in slot 5"
+      "description": "__MSG_command_open_slot_5__"
     },
     "open_slot_6": {
-      "description": "Open URL in slot 6"
+      "description": "__MSG_command_open_slot_6__"
     },
     "open_slot_7": {
-      "description": "Open URL in slot 7"
+      "description": "__MSG_command_open_slot_7__"
     },
     "open_slot_8": {
-      "description": "Open URL in slot 8"
+      "description": "__MSG_command_open_slot_8__"
     },
     "open_slot_9": {
-      "description": "Open URL in slot 9"
+      "description": "__MSG_command_open_slot_9__"
     },
     "open_group_1": {
-      "description": "Open all URLs in group 1"
+      "description": "__MSG_command_open_group_1__"
     },
     "open_group_2": {
-      "description": "Open all URLs in group 2"
+      "description": "__MSG_command_open_group_2__"
     },
     "open_group_3": {
-      "description": "Open all URLs in group 3"
+      "description": "__MSG_command_open_group_3__"
     },
     "open_group_4": {
-      "description": "Open all URLs in group 4"
+      "description": "__MSG_command_open_group_4__"
     },
     "open_group_5": {
-      "description": "Open all URLs in group 5"
+      "description": "__MSG_command_open_group_5__"
     },
     "open_group_6": {
-      "description": "Open all URLs in group 6"
+      "description": "__MSG_command_open_group_6__"
     },
     "open_group_7": {
-      "description": "Open all URLs in group 7"
+      "description": "__MSG_command_open_group_7__"
     },
     "open_group_8": {
-      "description": "Open all URLs in group 8"
+      "description": "__MSG_command_open_group_8__"
     },
     "open_group_9": {
-      "description": "Open all URLs in group 9"
+      "description": "__MSG_command_open_group_9__"
     }
   }
 }

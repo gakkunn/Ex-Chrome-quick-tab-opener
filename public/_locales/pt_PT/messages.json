@@ -1,0 +1,243 @@
+{
+  "extension_name": {
+    "message": "Quick Tab Opener",
+    "description": "Nome da extensão apresentado no navegador"
+  },
+  "extension_description": {
+    "message": "Abra URLs individuais e grupos de URLs utilizando atalhos de teclado totalmente personalizáveis.",
+    "description": "Descrição da extensão apresentada no navegador e na loja virtual"
+  },
+  "action_title": {
+    "message": "Configurar URLs",
+    "description": "Dica de ferramenta apresentada ao passar o rato sobre o ícone da extensão na barra de ferramentas"
+  },
+  "command_open_ui": {
+    "message": "Abrir a interface de definições",
+    "description": "Descrição do atalho de teclado para abrir as definições"
+  },
+  "command_open_slot_1": {
+    "message": "Abrir URL na ranhura 1",
+    "description": "Descrição do atalho de teclado para abrir a ranhura 1"
+  },
+  "command_open_slot_2": {
+    "message": "Abrir URL na ranhura 2",
+    "description": "Descrição do atalho de teclado para abrir a ranhura 2"
+  },
+  "command_open_slot_3": {
+    "message": "Abrir URL na ranhura 3",
+    "description": "Descrição do atalho de teclado para abrir a ranhura 3"
+  },
+  "command_open_slot_4": {
+    "message": "Abrir URL na ranhura 4",
+    "description": "Descrição do atalho de teclado para abrir a ranhura 4"
+  },
+  "command_open_slot_5": {
+    "message": "Abrir URL na ranhura 5",
+    "description": "Descrição do atalho de teclado para abrir a ranhura 5"
+  },
+  "command_open_slot_6": {
+    "message": "Abrir URL na ranhura 6",
+    "description": "Descrição do atalho de teclado para abrir a ranhura 6"
+  },
+  "command_open_slot_7": {
+    "message": "Abrir URL na ranhura 7",
+    "description": "Descrição do atalho de teclado para abrir a ranhura 7"
+  },
+  "command_open_slot_8": {
+    "message": "Abrir URL na ranhura 8",
+    "description": "Descrição do atalho de teclado para abrir a ranhura 8"
+  },
+  "command_open_slot_9": {
+    "message": "Abrir URL na ranhura 9",
+    "description": "Descrição do atalho de teclado para abrir a ranhura 9"
+  },
+  "command_open_group_1": {
+    "message": "Abrir todos os URLs do grupo 1",
+    "description": "Descrição do atalho de teclado para abrir o grupo 1"
+  },
+  "command_open_group_2": {
+    "message": "Abrir todos os URLs do grupo 2",
+    "description": "Descrição do atalho de teclado para abrir o grupo 2"
+  },
+  "command_open_group_3": {
+    "message": "Abrir todos os URLs do grupo 3",
+    "description": "Descrição do atalho de teclado para abrir o grupo 3"
+  },
+  "command_open_group_4": {
+    "message": "Abrir todos os URLs do grupo 4",
+    "description": "Descrição do atalho de teclado para abrir o grupo 4"
+  },
+  "command_open_group_5": {
+    "message": "Abrir todos os URLs do grupo 5",
+    "description": "Descrição do atalho de teclado para abrir o grupo 5"
+  },
+  "command_open_group_6": {
+    "message": "Abrir todos os URLs do grupo 6",
+    "description": "Descrição do atalho de teclado para abrir o grupo 6"
+  },
+  "command_open_group_7": {
+    "message": "Abrir todos os URLs do grupo 7",
+    "description": "Descrição do atalho de teclado para abrir o grupo 7"
+  },
+  "command_open_group_8": {
+    "message": "Abrir todos os URLs do grupo 8",
+    "description": "Descrição do atalho de teclado para abrir o grupo 8"
+  },
+  "command_open_group_9": {
+    "message": "Abrir todos os URLs do grupo 9",
+    "description": "Descrição do atalho de teclado para abrir o grupo 9"
+  },
+  "popup_title": {
+    "message": "Definições do Quick Tab Opener",
+    "description": "Título da página popup de definições"
+  },
+  "button_save": {
+    "message": "Guardar",
+    "description": "Rótulo do botão guardar"
+  },
+  "button_add": {
+    "message": "Adicionar",
+    "description": "Rótulo do botão para adicionar URL nos grupos"
+  },
+  "button_delete": {
+    "message": "Eliminar",
+    "description": "Rótulo do botão para eliminar URL nos grupos"
+  },
+  "shortcuts_banner_line1": {
+    "message": "Primeiro deve configurar os atalhos em",
+    "description": "Primeira linha do banner de atalhos"
+  },
+  "shortcuts_banner_line2": {
+    "message": "Predefinição: definições $1. Configure os outros atalhos manualmente (ex.: URL individual $2, grupo de URLs $3, etc.).",
+    "description": "Segunda linha do banner de atalhos com marcadores de posição para atalhos de teclado",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "Ctrl+Shift+0"
+      },
+      "2": {
+        "content": "$2",
+        "example": "Ctrl+1"
+      },
+      "3": {
+        "content": "$3",
+        "example": "Ctrl+Shift+1"
+      }
+    }
+  },
+  "label_open_as_pinned": {
+    "message": "Abrir como separadores afixados",
+    "description": "Rótulo da caixa de seleção para abrir separadores afixados"
+  },
+  "section_url_slots": {
+    "message": "Ranhuras de URL (até 9)",
+    "description": "Título da secção de ranhuras de URL"
+  },
+  "section_url_groups": {
+    "message": "Grupos de URL (até 10 URLs cada)",
+    "description": "Título da secção de grupos de URL"
+  },
+  "label_slot": {
+    "message": "Ranhura $1 ($2 recomendado, configurar manualmente)",
+    "description": "Rótulo para cada ranhura de URL",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "1"
+      },
+      "2": {
+        "content": "$2",
+        "example": "Ctrl+1"
+      }
+    }
+  },
+  "label_group": {
+    "message": "Grupo $1 ($2 recomendado, configurar manualmente)",
+    "description": "Rótulo para cada grupo de URL",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "1"
+      },
+      "2": {
+        "content": "$2",
+        "example": "Ctrl+Shift+1"
+      }
+    }
+  },
+  "placeholder_url": {
+    "message": "Exemplo: https://example.com",
+    "description": "Texto de marcador de posição para os campos de entrada de URL"
+  },
+  "msg_saved": {
+    "message": "Guardado.",
+    "description": "Mensagem de sucesso apresentada após guardar as definições"
+  },
+  "error_max_urls": {
+    "message": "Erro: O grupo $1 pode conter no máximo $2 URLs.",
+    "description": "Mensagem de erro quando o máximo de URLs num grupo é excedido",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "1"
+      },
+      "2": {
+        "content": "$2",
+        "example": "10"
+      }
+    }
+  },
+  "error_invalid_slot_url": {
+    "message": "A ranhura $1 contém um URL inválido: '$2'",
+    "description": "Mensagem de erro para URL inválido numa ranhura",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "1"
+      },
+      "2": {
+        "content": "$2",
+        "example": "not-a-url"
+      }
+    }
+  },
+  "error_invalid_group_url": {
+    "message": "O URL $2 do grupo $1 é inválido: '$3'",
+    "description": "Mensagem de erro para URL inválido num grupo",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "1"
+      },
+      "2": {
+        "content": "$2",
+        "example": "3"
+      },
+      "3": {
+        "content": "$3",
+        "example": "not-a-url"
+      }
+    }
+  },
+  "error_count": {
+    "message": "$1 erros encontrados:",
+    "description": "Cabeçalho para mensagem de múltiplos erros",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "error_and_more": {
+    "message": "...e mais $1",
+    "description": "Sufixo a mostrar erros adicionais não apresentados",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  }
+}
+

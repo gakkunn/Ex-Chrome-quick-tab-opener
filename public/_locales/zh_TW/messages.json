@@ -1,0 +1,243 @@
+{
+  "extension_name": {
+    "message": "Quick Tab Opener",
+    "description": "瀏覽器中顯示的擴充功能名稱"
+  },
+  "extension_description": {
+    "message": "使用完全可自訂的鍵盤快速鍵快速開啟單一網址或網址群組。",
+    "description": "瀏覽器和線上應用程式商店中顯示的擴充功能說明"
+  },
+  "action_title": {
+    "message": "設定網址",
+    "description": "將滑鼠停留在工具列中的擴充功能圖示上時顯示的工具提示"
+  },
+  "command_open_ui": {
+    "message": "開啟設定介面",
+    "description": "開啟設定的鍵盤快速鍵說明"
+  },
+  "command_open_slot_1": {
+    "message": "開啟插槽 1 中的網址",
+    "description": "開啟插槽 1 的鍵盤快速鍵說明"
+  },
+  "command_open_slot_2": {
+    "message": "開啟插槽 2 中的網址",
+    "description": "開啟插槽 2 的鍵盤快速鍵說明"
+  },
+  "command_open_slot_3": {
+    "message": "開啟插槽 3 中的網址",
+    "description": "開啟插槽 3 的鍵盤快速鍵說明"
+  },
+  "command_open_slot_4": {
+    "message": "開啟插槽 4 中的網址",
+    "description": "開啟插槽 4 的鍵盤快速鍵說明"
+  },
+  "command_open_slot_5": {
+    "message": "開啟插槽 5 中的網址",
+    "description": "開啟插槽 5 的鍵盤快速鍵說明"
+  },
+  "command_open_slot_6": {
+    "message": "開啟插槽 6 中的網址",
+    "description": "開啟插槽 6 的鍵盤快速鍵說明"
+  },
+  "command_open_slot_7": {
+    "message": "開啟插槽 7 中的網址",
+    "description": "開啟插槽 7 的鍵盤快速鍵說明"
+  },
+  "command_open_slot_8": {
+    "message": "開啟插槽 8 中的網址",
+    "description": "開啟插槽 8 的鍵盤快速鍵說明"
+  },
+  "command_open_slot_9": {
+    "message": "開啟插槽 9 中的網址",
+    "description": "開啟插槽 9 的鍵盤快速鍵說明"
+  },
+  "command_open_group_1": {
+    "message": "開啟群組 1 中的所有網址",
+    "description": "開啟群組 1 的鍵盤快速鍵說明"
+  },
+  "command_open_group_2": {
+    "message": "開啟群組 2 中的所有網址",
+    "description": "開啟群組 2 的鍵盤快速鍵說明"
+  },
+  "command_open_group_3": {
+    "message": "開啟群組 3 中的所有網址",
+    "description": "開啟群組 3 的鍵盤快速鍵說明"
+  },
+  "command_open_group_4": {
+    "message": "開啟群組 4 中的所有網址",
+    "description": "開啟群組 4 的鍵盤快速鍵說明"
+  },
+  "command_open_group_5": {
+    "message": "開啟群組 5 中的所有網址",
+    "description": "開啟群組 5 的鍵盤快速鍵說明"
+  },
+  "command_open_group_6": {
+    "message": "開啟群組 6 中的所有網址",
+    "description": "開啟群組 6 的鍵盤快速鍵說明"
+  },
+  "command_open_group_7": {
+    "message": "開啟群組 7 中的所有網址",
+    "description": "開啟群組 7 的鍵盤快速鍵說明"
+  },
+  "command_open_group_8": {
+    "message": "開啟群組 8 中的所有網址",
+    "description": "開啟群組 8 的鍵盤快速鍵說明"
+  },
+  "command_open_group_9": {
+    "message": "開啟群組 9 中的所有網址",
+    "description": "開啟群組 9 的鍵盤快速鍵說明"
+  },
+  "popup_title": {
+    "message": "Quick Tab Opener 設定",
+    "description": "設定彈出頁面的標題"
+  },
+  "button_save": {
+    "message": "儲存",
+    "description": "儲存按鈕的標籤"
+  },
+  "button_add": {
+    "message": "新增",
+    "description": "在群組中新增網址的按鈕標籤"
+  },
+  "button_delete": {
+    "message": "刪除",
+    "description": "在群組中刪除網址的按鈕標籤"
+  },
+  "shortcuts_banner_line1": {
+    "message": "請先設定快速鍵：",
+    "description": "快速鍵橫幅的第一行"
+  },
+  "shortcuts_banner_line2": {
+    "message": "預設：設定 $1。請手動設定其他快速鍵（例如：單一網址 $2，網址群組 $3 等）。",
+    "description": "包含鍵盤快速鍵預留位置的快速鍵橫幅第二行",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "Ctrl+Shift+0"
+      },
+      "2": {
+        "content": "$2",
+        "example": "Ctrl+1"
+      },
+      "3": {
+        "content": "$3",
+        "example": "Ctrl+Shift+1"
+      }
+    }
+  },
+  "label_open_as_pinned": {
+    "message": "以釘選分頁開啟",
+    "description": "以釘選方式開啟分頁的核取方塊標籤"
+  },
+  "section_url_slots": {
+    "message": "網址插槽（最多 9 個）",
+    "description": "網址插槽區段的標題"
+  },
+  "section_url_groups": {
+    "message": "網址群組（每組最多 10 個）",
+    "description": "網址群組區段的標題"
+  },
+  "label_slot": {
+    "message": "插槽 $1（建議使用 $2，需手動設定）",
+    "description": "每個網址插槽的標籤",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "1"
+      },
+      "2": {
+        "content": "$2",
+        "example": "Ctrl+1"
+      }
+    }
+  },
+  "label_group": {
+    "message": "群組 $1（建議使用 $2，需手動設定）",
+    "description": "每個網址群組的標籤",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "1"
+      },
+      "2": {
+        "content": "$2",
+        "example": "Ctrl+Shift+1"
+      }
+    }
+  },
+  "placeholder_url": {
+    "message": "範例：https://example.com",
+    "description": "網址輸入欄位的預留位置文字"
+  },
+  "msg_saved": {
+    "message": "已儲存。",
+    "description": "儲存設定後顯示的成功訊息"
+  },
+  "error_max_urls": {
+    "message": "錯誤：群組 $1 最多只能包含 $2 個網址。",
+    "description": "超出群組內網址最大數量時的錯誤訊息",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "1"
+      },
+      "2": {
+        "content": "$2",
+        "example": "10"
+      }
+    }
+  },
+  "error_invalid_slot_url": {
+    "message": "插槽 $1 包含無效網址：「$2」",
+    "description": "插槽中存在無效網址時的錯誤訊息",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "1"
+      },
+      "2": {
+        "content": "$2",
+        "example": "not-a-url"
+      }
+    }
+  },
+  "error_invalid_group_url": {
+    "message": "群組 $1 的網址 $2 無效：「$3」",
+    "description": "群組中存在無效網址時的錯誤訊息",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "1"
+      },
+      "2": {
+        "content": "$2",
+        "example": "3"
+      },
+      "3": {
+        "content": "$3",
+        "example": "not-a-url"
+      }
+    }
+  },
+  "error_count": {
+    "message": "發現 $1 個錯誤：",
+    "description": "多個錯誤訊息的標題",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "error_and_more": {
+    "message": "……還有 $1 個",
+    "description": "顯示未列出的其他錯誤的後綴",
+    "placeholders": {
+      "1": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  }
+}
+

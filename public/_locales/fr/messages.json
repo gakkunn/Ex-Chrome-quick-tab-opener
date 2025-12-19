@@ -1,0 +1,191 @@
+{
+  "extension_name": {
+    "message": "Quick Tab Opener",
+    "description": "Nom de l'extension affiché dans le navigateur"
+  },
+  "extension_description": {
+    "message": "Ouvrez des URLs individuelles et des groupes d'URLs à l'aide de raccourcis clavier entièrement personnalisables.",
+    "description": "Description de l'extension affichée dans le navigateur et le magasin Web"
+  },
+  "action_title": {
+    "message": "Configurer les URLs",
+    "description": "Info-bulle affichée au survol de l'icône de l'extension dans la barre d'outils"
+  },
+  "command_open_ui": {
+    "message": "Ouvrir l'interface des paramètres",
+    "description": "Description du raccourci clavier pour ouvrir les paramètres"
+  },
+  "command_open_slot_1": {
+    "message": "Ouvrir l'URL de l'emplacement 1",
+    "description": "Description du raccourci clavier pour ouvrir l'emplacement 1"
+  },
+  "command_open_slot_2": {
+    "message": "Ouvrir l'URL de l'emplacement 2",
+    "description": "Description du raccourci clavier pour ouvrir l'emplacement 2"
+  },
+  "command_open_slot_3": {
+    "message": "Ouvrir l'URL de l'emplacement 3",
+    "description": "Description du raccourci clavier pour ouvrir l'emplacement 3"
+  },
+  "command_open_slot_4": {
+    "message": "Ouvrir l'URL de l'emplacement 4",
+    "description": "Description du raccourci clavier pour ouvrir l'emplacement 4"
+  },
+  "command_open_slot_5": {
+    "message": "Ouvrir l'URL de l'emplacement 5",
+    "description": "Description du raccourci clavier pour ouvrir l'emplacement 5"
+  },
+  "command_open_slot_6": {
+    "message": "Ouvrir l'URL de l'emplacement 6",
+    "description": "Description du raccourci clavier pour ouvrir l'emplacement 6"
+  },
+  "command_open_slot_7": {
+    "message": "Ouvrir l'URL de l'emplacement 7",
+    "description": "Description du raccourci clavier pour ouvrir l'emplacement 7"
+  },
+  "command_open_slot_8": {
+    "message": "Ouvrir l'URL de l'emplacement 8",
+    "description": "Description du raccourci clavier pour ouvrir l'emplacement 8"
+  },
+  "command_open_slot_9": {
+    "message": "Ouvrir l'URL de l'emplacement 9",
+    "description": "Description du raccourci clavier pour ouvrir l'emplacement 9"
+  },
+  "command_open_group_1": {
+    "message": "Ouvrir toutes les URLs du groupe 1",
+    "description": "Description du raccourci clavier pour ouvrir le groupe 1"
+  },
+  "command_open_group_2": {
+    "message": "Ouvrir toutes les URLs du groupe 2",
+    "description": "Description du raccourci clavier pour ouvrir le groupe 2"
+  },
+  "command_open_group_3": {
+    "message": "Ouvrir toutes les URLs du groupe 3",
+    "description": "Description du raccourci clavier pour ouvrir le groupe 3"
+  },
+  "command_open_group_4": {
+    "message": "Ouvrir toutes les URLs du groupe 4",
+    "description": "Description du raccourci clavier pour ouvrir le groupe 4"
+  },
+  "command_open_group_5": {
+    "message": "Ouvrir toutes les URLs du groupe 5",
+    "description": "Description du raccourci clavier pour ouvrir le groupe 5"
+  },
+  "command_open_group_6": {
+    "message": "Ouvrir toutes les URLs du groupe 6",
+    "description": "Description du raccourci clavier pour ouvrir le groupe 6"
+  },
+  "command_open_group_7": {
+    "message": "Ouvrir toutes les URLs du groupe 7",
+    "description": "Description du raccourci clavier pour ouvrir le groupe 7"
+  },
+  "command_open_group_8": {
+    "message": "Ouvrir toutes les URLs du groupe 8",
+    "description": "Description du raccourci clavier pour ouvrir le groupe 8"
+  },
+  "command_open_group_9": {
+    "message": "Ouvrir toutes les URLs du groupe 9",
+    "description": "Description du raccourci clavier pour ouvrir le groupe 9"
+  },
+  "popup_title": {
+    "message": "Paramètres de Quick Tab Opener",
+    "description": "Titre de la page popup des paramètres"
+  },
+  "button_save": {
+    "message": "Enregistrer",
+    "description": "Libellé du bouton enregistrer"
+  },
+  "button_add": {
+    "message": "Ajouter",
+    "description": "Libellé du bouton pour ajouter une URL dans les groupes"
+  },
+  "button_delete": {
+    "message": "Supprimer",
+    "description": "Libellé du bouton pour supprimer une URL dans les groupes"
+  },
+  "shortcuts_banner_line1": {
+    "message": "Vous devez d'abord configurer les raccourcis dans",
+    "description": "Première ligne de la bannière des raccourcis"
+  },
+  "shortcuts_banner_line2": {
+    "message": "Par défaut : paramètres $1. Configurez les autres raccourcis manuellement (ex. : URL individuelle $2, groupe d'URLs $3, etc.).",
+    "description": "Deuxième ligne de la bannière des raccourcis avec espaces réservés pour les raccourcis clavier",
+    "placeholders": {
+      "1": { "content": "$1", "example": "Ctrl+Shift+0" },
+      "2": { "content": "$2", "example": "Ctrl+1" },
+      "3": { "content": "$3", "example": "Ctrl+Shift+1" }
+    }
+  },
+  "label_open_as_pinned": {
+    "message": "Ouvrir comme onglets épinglés",
+    "description": "Libellé de la case à cocher pour ouvrir les onglets épinglés"
+  },
+  "section_url_slots": {
+    "message": "Emplacements d'URL (jusqu'à 9)",
+    "description": "Titre de la section des emplacements d'URL"
+  },
+  "section_url_groups": {
+    "message": "Groupes d'URL (jusqu'à 10 URLs chacun)",
+    "description": "Titre de la section des groupes d'URL"
+  },
+  "label_slot": {
+    "message": "Emplacement $1 ($2 recommandé, à configurer manuellement)",
+    "description": "Libellé pour chaque emplacement d'URL",
+    "placeholders": {
+      "1": { "content": "$1", "example": "1" },
+      "2": { "content": "$2", "example": "Ctrl+1" }
+    }
+  },
+  "label_group": {
+    "message": "Groupe $1 ($2 recommandé, à configurer manuellement)",
+    "description": "Libellé pour chaque groupe d'URL",
+    "placeholders": {
+      "1": { "content": "$1", "example": "1" },
+      "2": { "content": "$2", "example": "Ctrl+Shift+1" }
+    }
+  },
+  "placeholder_url": {
+    "message": "Exemple : https://example.com",
+    "description": "Texte de remplacement pour les champs de saisie d'URL"
+  },
+  "msg_saved": {
+    "message": "Enregistré.",
+    "description": "Message de succès affiché après l'enregistrement des paramètres"
+  },
+  "error_max_urls": {
+    "message": "Erreur : Le groupe $1 peut contenir au maximum $2 URLs.",
+    "description": "Message d'erreur lorsque le maximum d'URLs dans un groupe est dépassé",
+    "placeholders": {
+      "1": { "content": "$1", "example": "1" },
+      "2": { "content": "$2", "example": "10" }
+    }
+  },
+  "error_invalid_slot_url": {
+    "message": "L'emplacement $1 contient une URL non valide : « $2 »",
+    "description": "Message d'erreur pour URL non valide dans un emplacement",
+    "placeholders": {
+      "1": { "content": "$1", "example": "1" },
+      "2": { "content": "$2", "example": "not-a-url" }
+    }
+  },
+  "error_invalid_group_url": {
+    "message": "L'URL $2 du groupe $1 n'est pas valide : « $3 »",
+    "description": "Message d'erreur pour URL non valide dans un groupe",
+    "placeholders": {
+      "1": { "content": "$1", "example": "1" },
+      "2": { "content": "$2", "example": "3" },
+      "3": { "content": "$3", "example": "not-a-url" }
+    }
+  },
+  "error_count": {
+    "message": "$1 erreurs trouvées :",
+    "description": "En-tête pour message d'erreurs multiples",
+    "placeholders": { "1": { "content": "$1", "example": "3" } }
+  },
+  "error_and_more": {
+    "message": "...et $1 de plus",
+    "description": "Suffixe montrant les erreurs supplémentaires non affichées",
+    "placeholders": { "1": { "content": "$1", "example": "5" } }
+  }
+}
+

@@ -1,0 +1,191 @@
+{
+  "extension_name": {
+    "message": "Quick Tab Opener",
+    "description": "Name der Erweiterung, der im Browser angezeigt wird"
+  },
+  "extension_description": {
+    "message": "Öffnen Sie einzelne URLs und URL-Gruppen mit vollständig anpassbaren Tastaturkürzeln.",
+    "description": "Beschreibung der Erweiterung, die im Browser und im Web Store angezeigt wird"
+  },
+  "action_title": {
+    "message": "URLs konfigurieren",
+    "description": "Tooltip, der beim Bewegen des Mauszeigers über das Erweiterungssymbol in der Symbolleiste angezeigt wird"
+  },
+  "command_open_ui": {
+    "message": "Einstellungen öffnen",
+    "description": "Beschreibung des Tastaturkürzels zum Öffnen der Einstellungen"
+  },
+  "command_open_slot_1": {
+    "message": "URL in Slot 1 öffnen",
+    "description": "Beschreibung des Tastaturkürzels zum Öffnen von Slot 1"
+  },
+  "command_open_slot_2": {
+    "message": "URL in Slot 2 öffnen",
+    "description": "Beschreibung des Tastaturkürzels zum Öffnen von Slot 2"
+  },
+  "command_open_slot_3": {
+    "message": "URL in Slot 3 öffnen",
+    "description": "Beschreibung des Tastaturkürzels zum Öffnen von Slot 3"
+  },
+  "command_open_slot_4": {
+    "message": "URL in Slot 4 öffnen",
+    "description": "Beschreibung des Tastaturkürzels zum Öffnen von Slot 4"
+  },
+  "command_open_slot_5": {
+    "message": "URL in Slot 5 öffnen",
+    "description": "Beschreibung des Tastaturkürzels zum Öffnen von Slot 5"
+  },
+  "command_open_slot_6": {
+    "message": "URL in Slot 6 öffnen",
+    "description": "Beschreibung des Tastaturkürzels zum Öffnen von Slot 6"
+  },
+  "command_open_slot_7": {
+    "message": "URL in Slot 7 öffnen",
+    "description": "Beschreibung des Tastaturkürzels zum Öffnen von Slot 7"
+  },
+  "command_open_slot_8": {
+    "message": "URL in Slot 8 öffnen",
+    "description": "Beschreibung des Tastaturkürzels zum Öffnen von Slot 8"
+  },
+  "command_open_slot_9": {
+    "message": "URL in Slot 9 öffnen",
+    "description": "Beschreibung des Tastaturkürzels zum Öffnen von Slot 9"
+  },
+  "command_open_group_1": {
+    "message": "Alle URLs in Gruppe 1 öffnen",
+    "description": "Beschreibung des Tastaturkürzels zum Öffnen von Gruppe 1"
+  },
+  "command_open_group_2": {
+    "message": "Alle URLs in Gruppe 2 öffnen",
+    "description": "Beschreibung des Tastaturkürzels zum Öffnen von Gruppe 2"
+  },
+  "command_open_group_3": {
+    "message": "Alle URLs in Gruppe 3 öffnen",
+    "description": "Beschreibung des Tastaturkürzels zum Öffnen von Gruppe 3"
+  },
+  "command_open_group_4": {
+    "message": "Alle URLs in Gruppe 4 öffnen",
+    "description": "Beschreibung des Tastaturkürzels zum Öffnen von Gruppe 4"
+  },
+  "command_open_group_5": {
+    "message": "Alle URLs in Gruppe 5 öffnen",
+    "description": "Beschreibung des Tastaturkürzels zum Öffnen von Gruppe 5"
+  },
+  "command_open_group_6": {
+    "message": "Alle URLs in Gruppe 6 öffnen",
+    "description": "Beschreibung des Tastaturkürzels zum Öffnen von Gruppe 6"
+  },
+  "command_open_group_7": {
+    "message": "Alle URLs in Gruppe 7 öffnen",
+    "description": "Beschreibung des Tastaturkürzels zum Öffnen von Gruppe 7"
+  },
+  "command_open_group_8": {
+    "message": "Alle URLs in Gruppe 8 öffnen",
+    "description": "Beschreibung des Tastaturkürzels zum Öffnen von Gruppe 8"
+  },
+  "command_open_group_9": {
+    "message": "Alle URLs in Gruppe 9 öffnen",
+    "description": "Beschreibung des Tastaturkürzels zum Öffnen von Gruppe 9"
+  },
+  "popup_title": {
+    "message": "Quick Tab Opener Einstellungen",
+    "description": "Titel der Einstellungs-Popup-Seite"
+  },
+  "button_save": {
+    "message": "Speichern",
+    "description": "Beschriftung der Speichern-Schaltfläche"
+  },
+  "button_add": {
+    "message": "Hinzufügen",
+    "description": "Beschriftung der Schaltfläche zum Hinzufügen einer URL in Gruppen"
+  },
+  "button_delete": {
+    "message": "Löschen",
+    "description": "Beschriftung der Schaltfläche zum Löschen einer URL in Gruppen"
+  },
+  "shortcuts_banner_line1": {
+    "message": "Konfigurieren Sie zuerst die Tastaturkürzel unter",
+    "description": "Erste Zeile des Tastaturkürzel-Banners"
+  },
+  "shortcuts_banner_line2": {
+    "message": "Standard: Einstellungen $1. Konfigurieren Sie andere Kürzel manuell (z.B. einzelne URL $2, URL-Gruppe $3 usw.).",
+    "description": "Zweite Zeile des Tastaturkürzel-Banners mit Platzhaltern für Tastaturkürzel",
+    "placeholders": {
+      "1": { "content": "$1", "example": "Ctrl+Shift+0" },
+      "2": { "content": "$2", "example": "Ctrl+1" },
+      "3": { "content": "$3", "example": "Ctrl+Shift+1" }
+    }
+  },
+  "label_open_as_pinned": {
+    "message": "Als angeheftete Tabs öffnen",
+    "description": "Beschriftung des Kontrollkästchens zum Öffnen angehefteter Tabs"
+  },
+  "section_url_slots": {
+    "message": "URL-Slots (bis zu 9)",
+    "description": "Abschnittsüberschrift für URL-Slots"
+  },
+  "section_url_groups": {
+    "message": "URL-Gruppen (bis zu 10 URLs pro Gruppe)",
+    "description": "Abschnittsüberschrift für URL-Gruppen"
+  },
+  "label_slot": {
+    "message": "Slot $1 ($2 empfohlen, manuell festlegen)",
+    "description": "Beschriftung für jeden URL-Slot",
+    "placeholders": {
+      "1": { "content": "$1", "example": "1" },
+      "2": { "content": "$2", "example": "Ctrl+1" }
+    }
+  },
+  "label_group": {
+    "message": "Gruppe $1 ($2 empfohlen, manuell festlegen)",
+    "description": "Beschriftung für jede URL-Gruppe",
+    "placeholders": {
+      "1": { "content": "$1", "example": "1" },
+      "2": { "content": "$2", "example": "Ctrl+Shift+1" }
+    }
+  },
+  "placeholder_url": {
+    "message": "Beispiel: https://example.com",
+    "description": "Platzhaltertext für URL-Eingabefelder"
+  },
+  "msg_saved": {
+    "message": "Gespeichert.",
+    "description": "Erfolgsmeldung nach dem Speichern der Einstellungen"
+  },
+  "error_max_urls": {
+    "message": "Fehler: Gruppe $1 kann maximal $2 URLs enthalten.",
+    "description": "Fehlermeldung bei Überschreitung der maximalen URL-Anzahl in einer Gruppe",
+    "placeholders": {
+      "1": { "content": "$1", "example": "1" },
+      "2": { "content": "$2", "example": "10" }
+    }
+  },
+  "error_invalid_slot_url": {
+    "message": "Slot $1 enthält eine ungültige URL: '$2'",
+    "description": "Fehlermeldung für ungültige URL in einem Slot",
+    "placeholders": {
+      "1": { "content": "$1", "example": "1" },
+      "2": { "content": "$2", "example": "not-a-url" }
+    }
+  },
+  "error_invalid_group_url": {
+    "message": "URL $2 in Gruppe $1 ist ungültig: '$3'",
+    "description": "Fehlermeldung für ungültige URL in einer Gruppe",
+    "placeholders": {
+      "1": { "content": "$1", "example": "1" },
+      "2": { "content": "$2", "example": "3" },
+      "3": { "content": "$3", "example": "not-a-url" }
+    }
+  },
+  "error_count": {
+    "message": "$1 Fehler gefunden:",
+    "description": "Überschrift für Mehrfachfehlermeldung",
+    "placeholders": { "1": { "content": "$1", "example": "3" } }
+  },
+  "error_and_more": {
+    "message": "...und $1 weitere",
+    "description": "Suffix für nicht angezeigte zusätzliche Fehler",
+    "placeholders": { "1": { "content": "$1", "example": "5" } }
+  }
+}
+
