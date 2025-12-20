@@ -1,15 +1,56 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+#app {
+  --popup-min-width: 300px;
+  --popup-padding: 1rem;
+  --text-color: #333;
+  --popup-bg: transparent;
+
+  --footer-margin-top: 0.5rem;
+
+  --hr-margin-y: 1rem;
+  --hr-width: 80%;
+  --hr-color: #ccc;
+
+  --links-gap: 0.5rem;
+  --link-color: #7b7b7b;
+  --link-hover-underline: underline;
+
+  --icon-size: 1rem;
+  --icon-margin-x: 0.2rem;
+  --icon-hover-opacity: 0.8;
+
+  --tooltip-bg: #343541;
+  --tooltip-color: #fff;
+  --tooltip-font-size: 0.8rem;
+  --tooltip-padding: 0.5rem;
+  --tooltip-radius: 0.5rem 0.5rem 0.5rem 0;
+  --tooltip-width: 5em;
+  --tooltip-z-index: 1;
+  --tooltip-offset-x: 120%;
+  --tooltip-offset-y: -135%;
+}
+
 body {
   font-family: system-ui, sans-serif;
   margin: 0;
-  padding: 24px 16px 40px;
+  padding: var(--popup-padding, 1rem);
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  min-width: var(--popup-min-width, 300px);
+  color: var(--text-color, #333);
+  background: var(--popup-bg, transparent);
 }
 
 .container {
   width: 550px;
   max-width: 100%;
+  min-width: var(--popup-min-width, 300px);
 }
 
 .header {
@@ -29,11 +70,16 @@ body {
   pointer-events: auto;
 }
 
+h3 {
+  margin: 16px 0 8px;
+  color: var(--text-color, #333);
+}
+
 label {
   display: block;
   font-size: 12px;
   margin-top: 12px;
-  color: #444;
+  color: var(--text-color, #333);
 }
 
 input[type='text'] {
@@ -197,4 +243,86 @@ a.shortcuts-link {
 a.shortcuts-link:hover {
   color: #185abc;
   text-decoration: none;
+}
+
+footer {
+  width: 100%;
+  margin-top: var(--footer-margin-top, 0.5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer hr {
+  width: var(--hr-width, 80%);
+  margin: var(--hr-margin-y, 1rem) auto;
+  border: 0;
+  border-bottom: 1px solid var(--hr-color, #ccc);
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--links-gap, 0.5rem);
+}
+
+.links div {
+  display: flex;
+}
+
+.footer-button {
+  position: relative;
+  color: var(--link-color, #7b7b7b);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-button:hover {
+  text-decoration: var(--link-hover-underline, underline);
+}
+
+.icon {
+  display: inline-block;
+  width: var(--icon-size, 1rem);
+  height: var(--icon-size, 1rem);
+  margin: 0 var(--icon-margin-x, 0.2rem);
+  vertical-align: bottom;
+}
+
+.footer-button:hover .icon {
+  opacity: var(--icon-hover-opacity, 0.8);
+}
+
+.footer-button:hover::after {
+  position: absolute;
+  top: 100%;
+  right: 100%;
+  transform: translate(var(--tooltip-offset-x, 120%), var(--tooltip-offset-y, -135%));
+  background: var(--tooltip-bg, #343541);
+  color: var(--tooltip-color, #fff);
+  font-size: var(--tooltip-font-size, 0.8rem);
+  padding: var(--tooltip-padding, 0.5rem);
+  border-radius: var(--tooltip-radius, 0.5rem 0.5rem 0.5rem 0);
+  min-width: var(--tooltip-width, 5em);
+  width: max-content;
+  z-index: var(--tooltip-z-index, 1);
+  text-align: center;
+  white-space: nowrap;
+  content: '';
+}
+
+.github-button:hover::after {
+  content: 'Contribute';
+}
+
+.question-button:hover::after {
+  content: 'Support';
+}
+
+.coffee-button:hover::after {
+  content: 'Buy me a coffee';
 }
