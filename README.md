@@ -2,6 +2,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 
+- Chrome Web Store: [Quick Tab Opener](https://chromewebstore.google.com/detail/quick-tab-opener/aiepeknccoakejpfadefmejhaphdkglj?authuser=0&hl=en)
+
 ## Overview
 
 Quick Tab Opener lets you open single URLs or preset groups of URLs with customizable keyboard shortcuts so you can jump into your workflow without navigating bookmarks manually.
@@ -31,14 +33,12 @@ This is an open-source extension implemented based on Chrome Extension Manifest 
 | Screen                                          | 
 | ----------------------------------------------- | 
 | ![screenshot-1](./docs/screenshot-1.png) | 
-| ![screenshot-2](./docs/screenshot-2.png) |
 
 ---
 
 ## Installation
 
-> ℹ️ **Not yet published to the Chrome Web Store.**  
-> You can use it via "Local Installation (Developer Mode)" below.
+- Chrome Web Store: [Quick Tab Opener](https://chromewebstore.google.com/detail/quick-tab-opener/aiepeknccoakejpfadefmejhaphdkglj?authuser=0&hl=en)
 
 ### 1. Clone the repository
 
